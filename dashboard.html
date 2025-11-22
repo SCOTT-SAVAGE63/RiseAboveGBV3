@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Rise Above GBVF Admin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body class="admin-dashboard">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-content">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+                <div class="admin-breadcrumb">
+                    <h1>Dashboard</h1>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="current-page">Overview</span>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="admin-search">
+                    <input type="text" placeholder="Search..." id="adminSearch">
+                    <button class="search-btn">🔍</button>
+                </div>
+                
+                <div class="admin-notifications">
+                    <button class="notification-btn" id="notificationBtn">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Notifications</h4>
+                            <button class="mark-all-read">Mark all read</button>
+                        </div>
+                        <div class="notification-list">
+                            <div class="notification-item unread">
+                                <div class="notification-icon">📝</div>
+                                <div class="notification-content">
+                                    <p>New blog post submission awaiting review</p>
+                                    <span class="notification-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="notification-item unread">
+                                <div class="notification-icon">👥</div>
+                                <div class="notification-content">
+                                    <p>5 new volunteer applications received</p>
+                                    <span class="notification-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <div class="notification-icon">💬</div>
+                                <div class="notification-content">
+                                    <p>New contact form submission</p>
+                                    <span class="notification-time">1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="admin-profile">
+                    <div class="profile-dropdown">
+                        <button class="profile-btn" id="profileBtn">
+                            <div class="profile-avatar">A</div>
+                            <span class="profile-name">Admin User</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="profile-menu" id="profileMenu">
+                            <a href="#" class="profile-menu-item">
+                                <span class="menu-icon">👤</span>
+                                My Profile
+                            </a>
+                            <a href="#" class="profile-menu-item">
+                                <span class="menu-icon">⚙️</span>
+                                Settings
+                            </a>
+                            <div class="menu-divider"></div>
+                            <a href="login.html" class="profile-menu-item logout">
+                                <span class="menu-icon">🚪</span>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar Navigation -->
+        <nav class="admin-sidebar" id="adminSidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <h3>Rise Above <span>GBVF</span></h3>
+                    <p>Administration</p>
+                </div>
+            </div>
+
+            <ul class="sidebar-nav">
+                <li class="nav-item active">
+                    <a href="dashboard.html" class="nav-link">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item has-submenu">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">📝</span>
+                        <span class="nav-text">Blog Posts</span>
+                        <span class="submenu-toggle">▶</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#all-posts">All Posts</a></li>
+                        <li><a href="#add-new">Add New</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item has-submenu">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">📄</span>
+                        <span class="nav-text">Page Content</span>
+                        <span class="submenu-toggle">▶</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#edit-home">Home Page</a></li>
+                        <li><a href="#edit-about">About Us</a></li>
+                        <li><a href="#edit-contact">Contact</a></li>
+                        <li><a href="#edit-resources">Resources</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#media" class="nav-link">
+                        <span class="nav-icon">🖼️</span>
+                        <span class="nav-text">Media Library</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">
+                        <span class="nav-icon">💬</span>
+                        <span class="nav-text">Testimonials</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#team" class="nav-link">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Team Members</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#statistics" class="nav-link">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Statistics</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#contacts" class="nav-link">
+                        <span class="nav-icon">📞</span>
+                        <span class="nav-text">Emergency Contacts</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#settings" class="nav-link">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <div class="status-indicator online"></div>
+                    <span>System Online</span>
+                </div>
+                <button class="btn-logout" onclick="location.href='login.html'">
+                    <span class="logout-icon">🚪</span>
+                    Logout
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="admin-main" id="adminMain">
+            <!-- Dashboard Overview -->
+            <section class="dashboard-overview">
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon primary">👁️</div>
+                        <div class="stat-content">
+                            <h3>12,458</h3>
+                            <p>Page Views</p>
+                            <span class="stat-trend positive">+12%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon success">📝</div>
+                        <div class="stat-content">
+                            <h3>47</h3>
+                            <p>Blog Posts</p>
+                            <span class="stat-trend positive">+5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon warning">👥</div>
+                        <div class="stat-content">
+                            <h3>23</h3>
+                            <p>Pending Applications</p>
+                            <span class="stat-trend negative">+8</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon info">💬</div>
+                        <div class="stat-content">
+                            <h3>156</h3>
+                            <p>Contact Messages</p>
+                            <span class="stat-trend positive">+24%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions-section">
+                    <h2>Quick Actions</h2>
+                    <div class="quick-actions-grid">
+                        <button class="quick-action-card glass-card" onclick="showBlogManager()">
+                            <div class="action-icon">📝</div>
+                            <h4>Write New Post</h4>
+                            <p>Create a new blog post or article</p>
+                        </button>
+                        
+                        <button class="quick-action-card glass-card" onclick="showMediaManager()">
+                            <div class="action-icon">🖼️</div>
+                            <h4>Manage Media</h4>
+                            <p>Upload and organize images</p>
+                        </button>
+                        
+                        <button class="quick-action-card glass-card" onclick="showPageEditor()">
+                            <div class="action-icon">📄</div>
+                            <h4>Edit Pages</h4>
+                            <p>Update website content</p>
+                        </button>
+                        
+                        <button class="quick-action-card glass-card" onclick="showSettings()">
+                            <div class="action-icon">⚙️</div>
+                            <h4>System Settings</h4>
+                            <p>Configure website settings</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="recent-activity-section">
+                    <div class="section-header">
+                        <h2>Recent Activity</h2>
+                        <button class="btn-view-all">View All</button>
+                    </div>
+                    <div class="activity-list glass-card">
+                        <div class="activity-item">
+                            <div class="activity-icon success">✓</div>
+                            <div class="activity-content">
+                                <p><strong>You</strong> published "Community March Success Story"</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon info">👥</div>
+                            <div class="activity-content">
+                                <p><strong>Sarah Johnson</strong> submitted a volunteer application</p>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon warning">📝</div>
+                            <div class="activity-content">
+                                <p><strong>System</strong> - Backup completed successfully</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon primary">💬</div>
+                            <div class="activity-content">
+                                <p>New contact form submission from <strong>Michael Brown</strong></p>
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Post Management Section -->
+            <section class="content-section" id="blog-management" style="display: none;">
+                <!-- This section would be populated dynamically -->
+            </section>
+
+            <!-- Page Content Management Section -->
+            <section class="content-section" id="page-management" style="display: none;">
+                <!-- This section would be populated dynamically -->
+            </section>
+
+            <!-- Media Library Section -->
+            <section class="content-section" id="media-library" style="display: none;">
+                <!-- This section would be populated dynamically -->
+            </section>
+        </main>
+    </div>
+
+    <!-- Blog Post Editor Modal -->
+    <div id="blogEditorModal" class="modal large-modal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h3>Edit Blog Post</h3>
+                <div class="modal-actions">
+                    <button class="btn-secondary" id="previewBtn">Preview</button>
+                    <button class="btn-primary" id="savePostBtn">Save Changes</button>
+                    <span class="close-modal">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- Blog editor content would go here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Media Upload Modal -->
+    <div id="mediaUploadModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <h3>Upload Media</h3>
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-placeholder">
+                    <div class="upload-icon">📁</div>
+                    <p>Drag & drop files here or click to browse</p>
+                    <input type="file" id="fileInput" multiple style="display: none;">
+                    <button class="btn-primary" onclick="document.getElementById('fileInput').click()">Select Files</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

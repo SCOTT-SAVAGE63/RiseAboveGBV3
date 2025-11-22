@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Rise Above GBVF | Emergency Help & Support Services</title>
+    <meta name="description" content="Find emergency resources, safety planning guides, legal aid, and support services for gender-based violence survivors in Phoenix, KwaZulu Natal.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Emergency Exit Button -->
+    <div class="emergency-exit">
+        <button id="quickExit">🚨 Quick Exit</button>
+    </div>
+
+    <!-- Crisis Banner -->
+    <div class="crisis-banner">
+        <div class="container">
+            <span class="crisis-alert">🚨 IN CRISIS?</span>
+            <span class="crisis-number">Call 074 067 7801 - Available 24/7</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="main-header">
+        <nav class="nav-container glass-nav">
+            <div class="logo">
+                <h2>Rise Above <span>GBVF</span></h2>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="resources.html" class="active">Resources ▾</a>
+                    <div class="dropdown-content glass-card">
+                        <a href="#police">Police Contacts</a>
+                        <a href="#hospital">Hospital Info</a>
+                        <a href="#legal">Legal Aid</a>
+                        <a href="#safety">Safety Planning</a>
+                        <a href="#rights">Know Your Rights</a>
+                        <a href="#digital">Digital Platforms</a>
+                    </div>
+                </li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-help">Get Help Now</button>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Resources Hero Section -->
+    <section class="resources-hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="resources-hero-content">
+                <h1>Your Safety Resource Hub</h1>
+                <p class="hero-subtitle">Comprehensive guides, emergency contacts, and support services to help you stay safe and access justice</p>
+                
+                <div class="resource-quick-nav">
+                    <a href="#police" class="quick-nav-item glass-card">
+                        <span class="nav-icon">👮</span>
+                        <span>Police Help</span>
+                    </a>
+                    <a href="#hospital" class="quick-nav-item glass-card">
+                        <span class="nav-icon">🏥</span>
+                        <span>Medical Care</span>
+                    </a>
+                    <a href="#legal" class="quick-nav-item glass-card">
+                        <span class="nav-icon">⚖️</span>
+                        <span>Legal Aid</span>
+                    </a>
+                    <a href="#safety" class="quick-nav-item glass-card">
+                        <span class="nav-icon">🛡️</span>
+                        <span>Safety Planning</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Resources Section -->
+    <section class="emergency-directory" id="police">
+        <div class="container">
+            <div class="section-header">
+                <h2>Emergency Contacts Directory</h2>
+                <p>Immediate help available 24/7. Save these numbers in your phone.</p>
+            </div>
+
+            <div class="emergency-grid">
+                <!-- Police Resources -->
+                <div class="emergency-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">👮</span>
+                        Police & Protection
+                    </h3>
+                    <div class="resource-cards">
+                        <div class="emergency-resource-card glass-card hover-scale">
+                            <div class="resource-badge police">Emergency</div>
+                            <div class="resource-main">
+                                <h4>Phoenix Police Station</h4>
+                                <div class="resource-contact">
+                                    <div class="contact-number">(031) 507 2050</div>
+                                    <div class="contact-address">123 Phoenix Highway, Phoenix</div>
+                                </div>
+                                <div class="resource-info">
+                                    <p>24/7 emergency response • GBVF trained officers • Victim support unit</p>
+                                </div>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="btn-call" onclick="window.location.href='tel:0315072050'">Call Now</button>
+                                <button class="btn-directions" onclick="getDirections('123 Phoenix Highway, Phoenix')">Directions</button>
+                            </div>
+                        </div>
+
+                        <div class="emergency-resource-card glass-card hover-scale">
+                            <div class="resource-badge national">National</div>
+                            <div class="resource-main">
+                                <h4>SAPS Emergency</h4>
+                                <div class="resource-contact">
+                                    <div class="contact-number">10111</div>
+                                    <div class="contact-address">Nationwide Emergency Line</div>
+                                </div>
+                                <div class="resource-info">
+                                    <p>National police emergency number • Free call from any phone • Immediate dispatch</p>
+                                </div>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="btn-call" onclick="window.location.href='tel:10111'">Call 10111</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Resources -->
+                <div class="emergency-category" id="hospital">
+                    <h3 class="category-title">
+                        <span class="category-icon">🏥</span>
+                        Medical & Healthcare
+                    </h3>
+                    <div class="resource-cards">
+                        <div class="emergency-resource-card glass-card hover-scale">
+                            <div class="resource-badge medical">Emergency</div>
+                            <div class="resource-main">
+                                <h4>Mahatma Gandhi Hospital</h4>
+                                <div class="resource-contact">
+                                    <div class="contact-number">(031) 502 1719</div>
+                                    <div class="contact-address">100 Phoenix Highway, Phoenix</div>
+                                </div>
+                                <div class="resource-info">
+                                    <p>24/7 emergency care • Sexual assault care • Trauma counseling • Forensic services</p>
+                                </div>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="btn-call" onclick="window.location.href='tel:0315021719'">Call Hospital</button>
+                                <button class="btn-directions" onclick="getDirections('100 Phoenix Highway, Phoenix')">Directions</button>
+                            </div>
+                        </div>
+
+                        <div class="emergency-resource-card glass-card hover-scale">
+                            <div class="resource-badge support">Support</div>
+                            <div class="resource-main">
+                                <h4>Thuthuzela Care Centre</h4>
+                                <div class="resource-contact">
+                                    <div class="contact-number">0800 428 428</div>
+                                    <div class="contact-address">Specialized GBV Care</div>
+                                </div>
+                                <div class="resource-info">
+                                    <p>One-stop facility for rape survivors • Medical, counseling, legal support • Free services</p>
+                                </div>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="btn-call" onclick="window.location.href='tel:0800428428'">Call Free</button>
+                                <button class="btn-info" onclick="showResourceInfo('thuthuzela')">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- National Hotlines -->
+                <div class="emergency-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">📞</span>
+                        National Helplines
+                    </h3>
+                    <div class="resource-cards">
+                        <div class="emergency-resource-card glass-card hover-scale">
+                            <div class="resource-badge crisis">24/7</div>
+                            <div class="resource-main">
+                                <h4>GBVF Command Centre</h4>
+                                <div class="resource-contact">
+                                    <div class="contact-number">0800 428 428</div>
+                                    <div class="contact-address">Toll-free • 24/7</div>
+                                </div>
+                                <div class="resource-info">
+                                    <p>National GBVF emergency line • SMS: *120*7355# • Psychological support • Legal advice</p>
+                                </div>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="btn-call" onclick="window.location.href='tel:0800428428'">Call Free</button>
+                            </div>
+                        </div>
+
+                        <div class="emergency-resource-card glass-card hover-scale">
+                            <div class="resource-badge crisis">24/7</div>
+                            <div class="resource-main">
+                                <h4>Childline South Africa</h4>
+                                <div class="resource-contact">
+                                    <div class="contact-number">0800 055 555</div>
+                                    <div class="contact-address">Toll-free • 24/7</div>
+                                </div>
+                                <div class="resource-info">
+                                    <p>Child protection services • Counseling for children • Abuse reporting • Online help</p>
+                                </div>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="btn-call" onclick="window.location.href='tel:0800055555'">Call Free</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Aid Section -->
+    <section class="legal-aid-section" id="legal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Legal Assistance & Protection</h2>
+                <p>Free legal services and protection mechanisms for survivors</p>
+            </div>
+
+            <div class="legal-grid">
+                <div class="legal-card glass-card hover-scale">
+                    <div class="legal-icon">⚖️</div>
+                    <h3>Legal Aid South Africa</h3>
+                    <div class="legal-contact">
+                        <p class="contact-number">0800 110 110</p>
+                        <p class="contact-hours">Mon-Fri: 8:00-17:00</p>
+                    </div>
+                    <div class="legal-services">
+                        <h4>Services Provided:</h4>
+                        <ul>
+                            <li>Protection Order Applications</li>
+                            <li>Divorce and Maintenance</li>
+                            <li>Criminal Case Support</li>
+                            <li>Legal Advice and Representation</li>
+                        </ul>
+                    </div>
+                    <button class="btn-legal" onclick="window.location.href='tel:0800110110'">Call Legal Aid</button>
+                </div>
+
+                <div class="legal-card glass-card hover-scale">
+                    <div class="legal-icon">🛡️</div>
+                    <h3>Protection Orders</h3>
+                    <div class="legal-info">
+                        <p>Immediate court protection from abuse. Available at any magistrate's court.</p>
+                    </div>
+                    <div class="legal-steps">
+                        <h4>How to Get a Protection Order:</h4>
+                        <ol>
+                            <li>Visit your nearest magistrate's court</li>
+                            <li>Complete application forms (assistance available)</li>
+                            <li>Interim order granted same day</li>
+                            <li>Final order issued within court process</li>
+                        </ol>
+                    </div>
+                    <button class="btn-legal" onclick="showProtectionOrderGuide()">View Guide</button>
+                </div>
+
+                <div class="legal-card glass-card hover-scale">
+                    <div class="legal-icon">📋</div>
+                    <h3>Court Preparation</h3>
+                    <div class="legal-info">
+                        <p>Support and preparation for court appearances and legal proceedings.</p>
+                    </div>
+                    <div class="legal-services">
+                        <h4>We Provide:</h4>
+                        <ul>
+                            <li>Court accompaniment</li>
+                            <li>Case preparation assistance</li>
+                            <li>Emotional support during hearings</li>
+                            <li>Understanding court procedures</li>
+                        </ul>
+                    </div>
+                    <button class="btn-legal" onclick="window.location.href='contact.html'">Request Support</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Know Your Rights Section -->
+    <section class="rights-section" id="rights">
+        <div class="container">
+            <div class="section-header">
+                <h2>Know Your Rights</h2>
+                <p>Understanding your legal rights and protections against gender-based violence</p>
+            </div>
+
+            <div class="rights-content glass-card">
+                <div class="rights-intro">
+                    <h3>Your Rights Under South African Law</h3>
+                    <p>Every person has the right to be free from all forms of violence. The law provides specific protections for survivors of gender-based violence.</p>
+                </div>
+
+                <div class="rights-grid">
+                    <div class="right-card">
+                        <div class="right-icon">🔒</div>
+                        <h4>Right to Safety</h4>
+                        <p>You have the right to live free from violence and fear. The police must protect you when you report abuse.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">⚖️</div>
+                        <h4>Right to Justice</h4>
+                        <p>You have the right to report abuse to police and have your case investigated properly.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">🏥</div>
+                        <h4>Right to Medical Care</h4>
+                        <p>You have the right to receive medical treatment, including forensic examination, after assault.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">🤝</div>
+                        <h4>Right to Support</h4>
+                        <p>You have the right to counseling, legal aid, and other support services free of charge.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">📝</div>
+                        <h4>Right to Protection Orders</h4>
+                        <p>You have the right to apply for a protection order at any time, including after hours.</p>
+                    </div>
+
+                    <div class="right-card">
+                        <div class="right-icon">🔍</div>
+                        <h4>Right to Privacy</h4>
+                        <p>Your personal information and case details must be kept confidential by all service providers.</p>
+                    </div>
+                </div>
+
+                <div class="rights-actions">
+                    <button class="btn-primary" onclick="downloadRightsGuide()">Download Rights Guide (PDF)</button>
+                    <button class="btn-secondary" onclick="showLegalFAQ()">View Legal FAQ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Planning Section -->
+    <section class="safety-planning-section" id="safety">
+        <div class="container">
+            <div class="section-header">
+                <h2>Safety Planning Guide</h2>
+                <p>Practical steps to increase your safety in different situations</p>
+            </div>
+
+            <div class="safety-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="home">🏠 Home Safety</button>
+                    <button class="tab-button" data-tab="work">💼 Work Safety</button>
+                    <button class="tab-button" data-tab="digital">📱 Digital Safety</button>
+                    <button class="tab-button" data-tab="emergency">🚨 Emergency Plan</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Home Safety Tab -->
+                    <div class="tab-pane active" id="home">
+                        <div class="safety-steps">
+                            <div class="safety-step glass-card">
+                                <div class="step-number">1</div>
+                                <h4>Secure Your Home</h4>
+                                <ul>
+                                    <li>Change locks if abuser has keys</li>
+                                    <li>Install security gates and cameras</li>
+                                    <li>Keep windows and doors locked</li>
+                                    <li>Install peepholes in doors</li>
+                                </ul>
+                            </div>
+
+                            <div class="safety-step glass-card">
+                                <div class="step-number">2</div>
+                                <h4>Create Safe Spaces</h4>
+                                <ul>
+                                    <li>Identify safe rooms with locks</li>
+                                    <li>Keep phone charged in safe room</li>
+                                    <li>Plan escape routes from each room</li>
+                                    <li>Teach children emergency procedures</li>
+                                </ul>
+                            </div>
+
+                            <div class="safety-step glass-card">
+                                <div class="step-number">3</div>
+                                <h4>Emergency Preparedness</h4>
+                                <ul>
+                                    <li>Keep emergency bag ready</li>
+                                    <li>Save emergency numbers on speed dial</li>
+                                    <li>Inform trusted neighbors</li>
+                                    <li>Practice emergency scenarios</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work Safety Tab -->
+                    <div class="tab-pane" id="work">
+                        <div class="safety-steps">
+                            <div class="safety-step glass-card">
+                                <div class="step-number">1</div>
+                                <h4>Workplace Security</h4>
+                                <ul>
+                                    <li>Inform security about protection order</li>
+                                    <li>Provide photo of abuser to security</li>
+                                    <li>Vary your arrival/departure times</li>
+                                    <li>Use different entrances/exits</li>
+                                </ul>
+                            </div>
+
+                            <div class="safety-step glass-card">
+                                <div class="step-number">2</div>
+                                <h4>Communication Safety</h4>
+                                <ul>
+                                    <li>Screen calls at reception</li>
+                                    <li>Use work email cautiously</li>
+                                    <li>Keep personal information private</li>
+                                    <li>Inform HR about your situation</li>
+                                </ul>
+                            </div>
+
+                            <div class="safety-step glass-card">
+                                <div class="step-number">3</div>
+                                <h4>Travel Safety</h4>
+                                <ul>
+                                    <li>Park in well-lit areas</li>
+                                    <li>Walk with colleagues to your car</li>
+                                    <li>Have security escort if needed</li>
+                                    <li>Keep phone charged and accessible</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Safety Tab -->
+                    <div class="tab-pane" id="digital">
+                        <div class="safety-steps">
+                            <div class="safety-step glass-card">
+                                <div class="step-number">1</div>
+                                <h4>Online Privacy</h4>
+                                <ul>
+                                    <li>Change all passwords regularly</li>
+                                    <li>Use two-factor authentication</li>
+                                    <li>Check for spyware on devices</li>
+                                    <li>Adjust social media privacy settings</li>
+                                </ul>
+                            </div>
+
+                            <div class="safety-step glass-card">
+                                <div class="step-number">2</div>
+                                <h4>Communication Safety</h4>
+                                <ul>
+                                    <li>Use encrypted messaging apps</li>
+                                    <li>Block harassing numbers/accounts</li>
+                                    <li>Save evidence of harassment</li>
+                                    <li>Be cautious with location sharing</li>
+                                </ul>
+                            </div>
+
+                            <div class="safety-step glass-card">
+                                <div class="step-number">3</div>
+                                <h4>Device Security</h4>
+                                <ul>
+                                    <li>Enable remote wipe features</li>
+                                    <li>Use screen locks with strong passwords</li>
+                                    <li>Log out of accounts when not using</li>
+                                    <li>Keep software updated</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Plan Tab -->
+                    <div class="tab-pane" id="emergency">
+                        <div class="emergency-plan glass-card">
+                            <h3>Your Emergency Escape Plan</h3>
+                            <div class="plan-steps">
+                                <div class="plan-step">
+                                    <h4>🚨 Immediate Danger</h4>
+                                    <p>If in immediate danger, call 10111 or our crisis line at 074 067 7801</p>
+                                </div>
+                                
+                                <div class="plan-step">
+                                    <h4>🎒 Emergency Bag</h4>
+                                    <p>Keep ready with: ID documents, medications, money, important phone numbers, change of clothes, phone charger</p>
+                                </div>
+                                
+                                <div class="plan-step">
+                                    <h4>🏠 Safe Locations</h4>
+                                    <p>Identify safe places to go: Police station, hospital, trusted friend/family, shelter</p>
+                                </div>
+                                
+                                <div class="plan-step">
+                                    <h4>📞 Trusted Contacts</h4>
+                                    <p>Share your safety plan with 2-3 trusted people who can help in emergency</p>
+                                </div>
+                            </div>
+                            
+                            <div class="download-plan">
+                                <button class="btn-primary" onclick="downloadSafetyPlan()">Download Safety Plan Template</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Platforms Section -->
+    <section class="digital-platforms-section" id="digital">
+        <div class="container">
+            <div class="section-header">
+                <h2>Digital Platforms & Online Resources</h2>
+                <p>Access support and information through our digital channels</p>
+            </div>
+
+            <div class="platforms-grid">
+                <div class="platform-card glass-card hover-scale">
+                    <div class="platform-icon">🎙️</div>
+                    <h3>Rise Above Podcast</h3>
+                    <p>Weekly discussions on GBVF awareness, survivor stories, and community solutions</p>
+                    <div class="platform-links">
+                        <button class="btn-platform" onclick="listenToPodcast()">Listen Now</button>
+                        <button class="btn-platform secondary" onclick="subscribePodcast()">Subscribe</button>
+                    </div>
+                </div>
+
+                <div class="platform-card glass-card hover-scale">
+                    <div class="platform-icon">📱</div>
+                    <h3>WhatsApp Support</h3>
+                    <p>Confidential chat support and resource sharing through WhatsApp</p>
+                    <div class="platform-links">
+                        <button class="btn-platform" onclick="openWhatsApp()">Chat Now</button>
+                        <button class="btn-platform secondary" onclick="saveWhatsAppNumber()">Save Number</button>
+                    </div>
+                </div>
+
+                <div class="platform-card glass-card hover-scale">
+                    <div class="platform-icon">📘</div>
+                    <h3>Facebook Community</h3>
+                    <p>Join our private support group and follow our awareness campaigns</p>
+                    <div class="platform-links">
+                        <button class="btn-platform" onclick="visitFacebook()">Join Group</button>
+                        <button class="btn-platform secondary" onclick="followFacebook()">Follow Page</button>
+                    </div>
+                </div>
+
+                <div class="platform-card glass-card hover-scale">
+                    <div class="platform-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <p>Daily inspiration, educational content, and community stories</p>
+                    <div class="platform-links">
+                        <button class="btn-platform" onclick="visitInstagram()">Follow Us</button>
+                        <button class="btn-platform secondary" onclick="viewStories()">View Stories</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsletter-signup glass-card">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for resources, event updates, and support information</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Help Section -->
+    <section class="quick-help-section">
+        <div class="container">
+            <div class="quick-help-grid">
+                <div class="help-card glass-card">
+                    <h3>🚨 Immediate Help</h3>
+                    <p>If you're in danger right now, don't wait. Call emergency services or our crisis line.</p>
+                    <div class="emergency-numbers">
+                        <div class="emergency-number">074 067 7801</div>
+                        <div class="emergency-number">10111</div>
+                    </div>
+                    <button class="btn-emergency" onclick="window.location.href='tel:0740677801'">Call Crisis Line</button>
+                </div>
+
+                <div class="help-card glass-card">
+                    <h3>📞 Talk to Someone</h3>
+                    <p>Our trained counselors are available to listen and provide support confidentially.</p>
+                    <div class="support-options">
+                        <p>Available in English and isiZulu</p>
+                        <p>24/7 crisis support</p>
+                    </div>
+                    <button class="btn-support" onclick="window.location.href='contact.html'">Request Call Back</button>
+                </div>
+
+                <div class="help-card glass-card">
+                    <h3>📍 Find Help Nearby</h3>
+                    <p>Locate shelters, support groups, and services in your area.</p>
+                    <div class="location-options">
+                        <p>Phoenix and surrounding areas</p>
+                        <p>Confidential locations</p>
+                    </div>
+                    <button class="btn-location" onclick="showNearbyServices()">Find Services</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Rise Above GBVF</h3>
+                    <p>Creating a world free from gender-based violence and femicide in Shastripark, Phoenix, KwaZulu Natal.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📞</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="#safety">Safety Planning</a></li>
+                        <li><a href="contact.html">Crisis Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📍 Shastripark, Phoenix<br>KwaZulu Natal, South Africa</p>
+                        <p>📞 074 067 7801</p>
+                        <p>✉️ help@riseabovegbvf.org</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rise Above GBVF. Founded in Shastripark, Phoenix, KZN. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resource Info Modal -->
+    <div id="resourceModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

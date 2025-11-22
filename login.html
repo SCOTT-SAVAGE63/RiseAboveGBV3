@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Rise Above GBVF</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body class="admin-login-page">
+    <!-- Minimal background for login page -->
+    <div class="admin-login-background"></div>
+    
+    <div class="admin-login-container">
+        <div class="admin-login-card glass-card">
+            <!-- Organization Logo -->
+            <div class="admin-login-header">
+                <div class="admin-logo">
+                    <h2>Rise Above <span>GBVF</span></h2>
+                    <p>Admin Dashboard</p>
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="adminLoginForm" class="admin-login-form">
+                <div class="form-header">
+                    <h1>Secure Login</h1>
+                    <p>Access the administration dashboard</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="adminUsername" name="username" required autocomplete="username">
+                        <span class="input-icon">👤</span>
+                    </div>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="adminPassword" name="password" required autocomplete="current-password">
+                        <span class="input-icon">🔒</span>
+                        <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+                    </div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password" id="forgotPassword">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-admin-login" id="loginButton">
+                    <span class="btn-text">Sign In</span>
+                    <div class="loading-spinner" style="display: none;"></div>
+                </button>
+
+                <div class="security-notice">
+                    <div class="security-icon">🛡️</div>
+                    <p>This is a secure administrative area. All activities are logged and monitored.</p>
+                </div>
+            </form>
+
+            <!-- Failed Attempts Warning -->
+            <div class="security-warning" id="securityWarning" style="display: none;">
+                <div class="warning-icon">⚠️</div>
+                <div class="warning-content">
+                    <h4>Multiple Failed Attempts</h4>
+                    <p>Too many failed login attempts. Please wait 15 minutes or contact system administrator.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version Info -->
+        <div class="version-info">
+            <p>Admin Panel v2.1.0 | Secure Access Required</p>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <h3>Reset Password</h3>
+            <p>Enter your username to receive password reset instructions.</p>
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <button type="submit" class="btn-primary">Send Reset Instructions</button>
+            </form>
+            <p class="modal-note">Instructions will be sent to the email associated with your account.</p>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

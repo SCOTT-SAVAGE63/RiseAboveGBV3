@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Rise Above GBVF | Join Our Movement Against Gender-Based Violence</title>
+    <meta name="description" content="Join Rise Above GBVF as a volunteer. Make a difference in your community by supporting survivors and preventing gender-based violence in Phoenix, KZN.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Emergency Exit Button -->
+    <div class="emergency-exit">
+        <button id="quickExit">🚨 Quick Exit</button>
+    </div>
+
+    <!-- Crisis Banner -->
+    <div class="crisis-banner">
+        <div class="container">
+            <span class="crisis-alert">🚨 IN CRISIS?</span>
+            <span class="crisis-number">Call 074 067 7801 - Available 24/7</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="main-header">
+        <nav class="nav-container glass-nav">
+            <div class="logo">
+                <h2>Rise Above <span>GBVF</span></h2>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="resources.html">Resources ▾</a>
+                    <div class="dropdown-content glass-card">
+                        <a href="resources.html#police">Police Contacts</a>
+                        <a href="resources.html#hospital">Hospital Info</a>
+                        <a href="resources.html#legal">Legal Aid</a>
+                        <a href="resources.html#safety">Safety Planning</a>
+                    </div>
+                </li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="volunteer.html" class="active">Volunteer</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-help">Get Help Now</button>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Volunteer Hero Section -->
+    <section class="volunteer-hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="volunteer-hero-content">
+                <h1>Join Our Volunteer Family</h1>
+                <p class="hero-subtitle">Your time and skills can help create a safer community free from gender-based violence. Together, we can make a lasting difference.</p>
+                
+                <div class="volunteer-impact glass-card">
+                    <div class="impact-stats">
+                        <div class="impact-stat">
+                            <div class="stat-number">85</div>
+                            <div class="stat-label">Active Volunteers</div>
+                        </div>
+                        <div class="impact-stat">
+                            <div class="stat-number">2,500+</div>
+                            <div class="stat-label">Hours Contributed</div>
+                        </div>
+                        <div class="impact-stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfaction Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="scrollToOpportunities()">View Opportunities</button>
+                    <button class="btn-secondary" onclick="scrollToApplication()">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Volunteer Section -->
+    <section class="why-volunteer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Volunteer With Us?</h2>
+                <p>Discover the meaningful impact you can make while growing personally and professionally</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card glass-card hover-scale">
+                    <div class="benefit-icon">💝</div>
+                    <h3>Make a Real Difference</h3>
+                    <p>Directly impact survivors' lives and contribute to ending GBVF in your community. See the tangible results of your efforts.</p>
+                </div>
+
+                <div class="benefit-card glass-card hover-scale">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Personal Growth</h3>
+                    <p>Develop new skills, gain valuable experience, and build confidence through meaningful work and comprehensive training.</p>
+                </div>
+
+                <div class="benefit-card glass-card hover-scale">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Community Connection</h3>
+                    <p>Join a supportive network of like-minded individuals passionate about creating positive change in Phoenix.</p>
+                </div>
+
+                <div class="benefit-card glass-card hover-scale">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Professional Training</h3>
+                    <p>Receive specialized training in crisis intervention, counseling basics, and GBVF awareness at no cost to you.</p>
+                </div>
+
+                <div class="benefit-card glass-card hover-scale">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Career Development</h3>
+                    <p>Gain experience that enhances your CV and opens doors in social work, counseling, and community development.</p>
+                </div>
+
+                <div class="benefit-card glass-card hover-scale">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Flexible Commitment</h3>
+                    <p>Choose opportunities that fit your schedule with various time commitments and remote options available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Opportunities -->
+    <section class="opportunities-section" id="opportunities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Volunteer Opportunities</h2>
+                <p>Find the perfect role that matches your skills, interests, and availability</p>
+            </div>
+
+            <div class="opportunities-filter">
+                <button class="filter-btn active" data-filter="all">All Roles</button>
+                <button class="filter-btn" data-filter="direct">Direct Support</button>
+                <button class="filter-btn" data-filter="awareness">Awareness</button>
+                <button class="filter-btn" data-filter="admin">Administrative</button>
+                <button class="filter-btn" data-filter="skills">Skills-Based</button>
+            </div>
+
+            <div class="opportunities-grid">
+                <!-- Counseling Support Volunteer -->
+                <div class="opportunity-card glass-card hover-scale" data-category="direct">
+                    <div class="opportunity-badge direct">Direct Support</div>
+                    <div class="opportunity-header">
+                        <h3>Counseling Support Volunteer</h3>
+                        <div class="opportunity-meta">
+                            <span class="time-commitment">🕒 4-6 hours/week</span>
+                            <span class="location">📍 Phoenix Office</span>
+                        </div>
+                    </div>
+                    
+                    <div class="opportunity-content">
+                        <p>Provide emotional support and basic counseling to survivors in a safe, confidential environment. Perfect for psychology students or caring individuals.</p>
+                        
+                        <div class="responsibilities">
+                            <h4>Key Responsibilities:</h4>
+                            <ul>
+                                <li>Provide empathetic listening and emotional support</li>
+                                <li>Assist with crisis intervention under supervision</li>
+                                <li>Help survivors access additional resources</li>
+                                <li>Maintain strict confidentiality protocols</li>
+                            </ul>
+                        </div>
+
+                        <div class="requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Completed our 20-hour training program</li>
+                                <li>Empathetic and non-judgmental attitude</li>
+                                <li>Background check clearance</li>
+                                <li>Minimum 3-month commitment</li>
+                            </ul>
+                        </div>
+
+                        <div class="training-provided">
+                            <h4>Training Provided:</h4>
+                            <p>✅ Crisis intervention • ✅ Active listening • ✅ Trauma-informed care • ✅ Safety protocols</p>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-actions">
+                        <button class="btn-apply" onclick="applyForRole('counseling-support')">Apply for this Role</button>
+                        <button class="btn-info" onclick="showRoleDetails('counseling-support')">More Info</button>
+                    </div>
+                </div>
+
+                <!-- Awareness Campaign Assistant -->
+                <div class="opportunity-card glass-card hover-scale" data-category="awareness">
+                    <div class="opportunity-badge awareness">Awareness</div>
+                    <div class="opportunity-header">
+                        <h3>Awareness Campaign Assistant</h3>
+                        <div class="opportunity-meta">
+                            <span class="time-commitment">🕒 2-4 hours/week</span>
+                            <span class="location">📍 Community Events</span>
+                        </div>
+                    </div>
+                    
+                    <div class="opportunity-content">
+                        <p>Help spread awareness about GBVF prevention and support services at community events, schools, and public spaces.</p>
+                        
+                        <div class="responsibilities">
+                            <h4>Key Responsibilities:</h4>
+                            <ul>
+                                <li>Staff information tables at community events</li>
+                                <li>Distribute educational materials</li>
+                                <li>Engage community members in conversations</li>
+                                <li>Assist with event setup and coordination</li>
+                            </ul>
+                        </div>
+
+                        <div class="requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Good communication skills</li>
+                                <li>Comfortable speaking with diverse groups</li>
+                                <li>Reliable and punctual</li>
+                                <li>Passion for community education</li>
+                            </ul>
+                        </div>
+
+                        <div class="training-provided">
+                            <h4>Training Provided:</h4>
+                            <p>✅ Public speaking • ✅ GBVF education • ✅ Community engagement • ✅ Event coordination</p>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-actions">
+                        <button class="btn-apply" onclick="applyForRole('awareness-campaign')">Apply for this Role</button>
+                        <button class="btn-info" onclick="showRoleDetails('awareness-campaign')">More Info</button>
+                    </div>
+                </div>
+
+                <!-- Administrative Support Volunteer -->
+                <div class="opportunity-card glass-card hover-scale" data-category="admin">
+                    <div class="opportunity-badge admin">Administrative</div>
+                    <div class="opportunity-header">
+                        <h3>Administrative Support Volunteer</h3>
+                        <div class="opportunity-meta">
+                            <span class="time-commitment">🕒 3-5 hours/week</span>
+                            <span class="location">📍 Flexible/Remote</span>
+                        </div>
+                    </div>
+                    
+                    <div class="opportunity-content">
+                        <p>Provide crucial administrative support that keeps our organization running smoothly and efficiently.</p>
+                        
+                        <div class="responsibilities">
+                            <h4>Key Responsibilities:</h4>
+                            <ul>
+                                <li>Data entry and database management</li>
+                                <li>Answering phones and directing calls</li>
+                                <li>Preparing materials for workshops</li>
+                                <li>Assisting with mail and communications</li>
+                            </ul>
+                        </div>
+
+                        <div class="requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Basic computer skills</li>
+                                <li>Good organizational abilities</li>
+                                <li>Attention to detail</li>
+                                <li>Respect for confidentiality</li>
+                            </ul>
+                        </div>
+
+                        <div class="training-provided">
+                            <h4>Training Provided:</h4>
+                            <p>✅ Database systems • ✅ Office procedures • ✅ Confidentiality protocols • ✅ Communication skills</p>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-actions">
+                        <button class="btn-apply" onclick="applyForRole('admin-support')">Apply for this Role</button>
+                        <button class="btn-info" onclick="showRoleDetails('admin-support')">More Info</button>
+                    </div>
+                </div>
+
+                <!-- Skills Training Facilitator -->
+                <div class="opportunity-card glass-card hover-scale" data-category="skills">
+                    <div class="opportunity-badge skills">Skills-Based</div>
+                    <div class="opportunity-header">
+                        <h3>Skills Training Facilitator</h3>
+                        <div class="opportunity-meta">
+                            <span class="time-commitment">🕒 3-6 hours/week</span>
+                            <span class="location">📍 Phoenix Center</span>
+                        </div>
+                    </div>
+                    
+                    <div class="opportunity-content">
+                        <p>Share your professional skills to empower survivors with practical abilities for economic independence.</p>
+                        
+                        <div class="responsibilities">
+                            <h4>Key Responsibilities:</h4>
+                            <ul>
+                                <li>Develop and deliver skills workshops</li>
+                                <li>Provide one-on-one mentoring</li>
+                                <li>Create learning materials</li>
+                                <li>Assess participant progress</li>
+                            </ul>
+                        </div>
+
+                        <div class="requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Expertise in a specific skill area</li>
+                                <li>Teaching or mentoring experience</li>
+                                <li>Patience and adaptability</li>
+                                <li>Background check clearance</li>
+                            </ul>
+                        </div>
+
+                        <div class="training-provided">
+                            <h4>Training Provided:</h4>
+                            <p>✅ Trauma-informed teaching • ✅ Workshop facilitation • ✅ Empowerment approaches • ✅ Safety protocols</p>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-actions">
+                        <button class="btn-apply" onclick="applyForRole('skills-facilitator')">Apply for this Role</button>
+                        <button class="btn-info" onclick="showRoleDetails('skills-facilitator')">More Info</button>
+                    </div>
+                </div>
+
+                <!-- Community Outreach Coordinator -->
+                <div class="opportunity-card glass-card hover-scale" data-category="awareness">
+                    <div class="opportunity-badge awareness">Awareness</div>
+                    <div class="opportunity-header">
+                        <h3>Community Outreach Coordinator</h3>
+                        <div class="opportunity-meta">
+                            <span class="time-commitment">🕒 5-8 hours/week</span>
+                            <span class="location">📍 Phoenix & Surrounding</span>
+                        </div>
+                    </div>
+                    
+                    <div class="opportunity-content">
+                        <p>Help expand our reach and build partnerships within the Phoenix community and surrounding areas.</p>
+                        
+                        <div class="responsibilities">
+                            <h4>Key Responsibilities:</h4>
+                            <ul>
+                                <li>Identify and contact potential community partners</li>
+                                <li>Organize outreach events and activities</li>
+                                <li>Build relationships with local organizations</li>
+                                <li>Represent Rise Above GBVF at community meetings</li>
+                            </ul>
+                        </div>
+
+                        <div class="requirements">
+                            <h4>Requirements:</h4>
+                            <ul>
+                                <li>Strong networking skills</li>
+                                <li>Knowledge of Phoenix community</li>
+                                <li>Excellent communication abilities</li>
+                                <li>Self-motivated and organized</li>
+                            </ul>
+                        </div>
+
+                        <div class="training-provided">
+                            <h4>Training Provided:</h4>
+                            <p>✅ Community mapping • ✅ Partnership building • ✅ Public relations • ✅ Event planning</p>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-actions">
+                        <button class="btn-apply" onclick="applyForRole('outreach-coordinator')">Apply for this Role</button>
+                        <button class="btn-info" onclick="showRoleDetails('outreach-coordinator')">More Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Requirements -->
+    <section class="requirements-section">
+        <div class="container">
+            <div class="requirements-card glass-card">
+                <h2>Volunteer Requirements & Process</h2>
+                <p>To ensure the safety and effectiveness of our programs, all volunteers must complete the following process:</p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Application & Screening</h4>
+                            <p>Complete our volunteer application form and participate in an initial screening interview.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Background Check</h4>
+                            <p>All direct service volunteers must complete a criminal background check for safety.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Comprehensive Training</h4>
+                            <p>Complete our mandatory training program covering GBVF awareness, safety, and role-specific skills.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Supervised Onboarding</h4>
+                            <p>Begin your role with close supervision and ongoing support from experienced team members.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-commitment-info">
+                    <h4>Time Commitment</h4>
+                    <div class="commitment-options">
+                        <div class="commitment-option">
+                            <strong>Regular Volunteers:</strong> Minimum 3-month commitment, 2-8 hours per week
+                        </div>
+                        <div class="commitment-option">
+                            <strong>Event Volunteers:</strong> Flexible commitment for specific events and campaigns
+                        </div>
+                        <div class="commitment-option">
+                            <strong>Remote Volunteers:</strong> Flexible hours working from home on specific projects
+                        </div>
+                    </div>
+                </div>
+
+                <div class="support-provided">
+                    <h4>We Provide Our Volunteers With:</h4>
+                    <div class="support-items">
+                        <div class="support-item">✅ Comprehensive training and ongoing development</div>
+                        <div class="support-item">✅ Supervision and mentorship</div>
+                        <div class="support-item">✅ Travel reimbursement for approved activities</div>
+                        <div class="support-item">✅ Reference letters after 3 months of service</div>
+                        <div class="support-item">✅ Recognition events and appreciation</div>
+                        <div class="support-item">✅ Professional development opportunities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Application Form -->
+    <section class="application-section" id="application">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Start your volunteer journey by completing our application form</p>
+            </div>
+
+            <div class="application-container">
+                <div class="application-form-card glass-card">
+                    <form id="volunteerForm" class="volunteer-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="volunteerFirstName">First Name *</label>
+                                    <input type="text" id="volunteerFirstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="volunteerLastName">Last Name *</label>
+                                    <input type="text" id="volunteerLastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="volunteerEmail">Email Address *</label>
+                                    <input type="email" id="volunteerEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="volunteerPhone">Phone Number *</label>
+                                    <input type="tel" id="volunteerPhone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="volunteerAddress">Address</label>
+                                    <input type="text" id="volunteerAddress" name="address" placeholder="Street Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="volunteerSuburb">Suburb *</label>
+                                    <input type="text" id="volunteerSuburb" name="suburb" required placeholder="e.g., Phoenix, Verulam, etc.">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Volunteer Preferences -->
+                        <div class="form-section">
+                            <h3>Volunteer Preferences</h3>
+                            
+                            <div class="form-group">
+                                <label>Which roles interest you? *</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="roles" value="counseling">
+                                        <span>Counseling Support</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="roles" value="awareness">
+                                        <span>Awareness Campaigns</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="roles" value="admin">
+                                        <span>Administrative Support</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="roles" value="skills">
+                                        <span>Skills Training</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="roles" value="outreach">
+                                        <span>Community Outreach</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="roles" value="other">
+                                        <span>Other (specify in comments)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="availability">Weekly Availability *</label>
+                                    <select id="availability" name="availability" required>
+                                        <option value="">Select hours per week</option>
+                                        <option value="1-3">1-3 hours</option>
+                                        <option value="3-5">3-5 hours</option>
+                                        <option value="5-8">5-8 hours</option>
+                                        <option value="8+">8+ hours</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="commitment">Preferred Commitment Period *</label>
+                                    <select id="commitment" name="commitment" required>
+                                        <option value="">Select commitment</option>
+                                        <option value="3-months">3 months</option>
+                                        <option value="6-months">6 months</option>
+                                        <option value="1-year">1 year</option>
+                                        <option value="flexible">Flexible/Event-based</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Preferred Work Location</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="location" value="office" checked>
+                                        <span>Phoenix Office</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="location" value="community">
+                                        <span>Community Events</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="location" value="remote">
+                                        <span>Remote/From Home</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="location" value="flexible">
+                                        <span>Flexible/Combination</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skills & Experience -->
+                        <div class="form-section">
+                            <h3>Skills & Experience</h3>
+                            
+                            <div class="form-group">
+                                <label for="experience">Relevant Experience</label>
+                                <textarea id="experience" name="experience" rows="4" placeholder="Please describe any relevant volunteer, work, or personal experience..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="skills">Skills & Qualifications</label>
+                                <textarea id="skills" name="skills" rows="4" placeholder="Please list any relevant skills, qualifications, or training..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Languages Spoken</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="languages" value="english" checked>
+                                        <span>English</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="languages" value="zulu">
+                                        <span>isiZulu</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="languages" value="xhosa">
+                                        <span>isiXhosa</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="languages" value="afrikaans">
+                                        <span>Afrikaans</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="languages" value="other">
+                                        <span>Other</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Background Check Consent -->
+                        <div class="form-section">
+                            <div class="consent-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="backgroundCheck" required>
+                                    <span>I understand that for direct service roles, a criminal background check is required for the safety of our clients *</span>
+                                </label>
+                            </div>
+
+                            <div class="consent-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="confidentiality" required>
+                                    <span>I agree to maintain strict confidentiality regarding all client information and organizational matters *</span>
+                                </label>
+                            </div>
+
+                            <div class="consent-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="training" required>
+                                    <span>I commit to completing all required training before beginning volunteer duties *</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Additional Comments -->
+                        <div class="form-section">
+                            <div class="form-group">
+                                <label for="comments">Additional Comments</label>
+                                <textarea id="comments" name="comments" rows="4" placeholder="Is there anything else you'd like us to know about your interest in volunteering?"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-volunteer">
+                            <span class="btn-text">Submit Application</span>
+                            <div class="loading-spinner" style="display: none;"></div>
+                        </button>
+
+                        <div class="privacy-notice">
+                            <p>🔒 Your information is secure and will only be used for volunteer placement purposes. We respect your privacy.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Application Tips -->
+                <div class="application-tips">
+                    <div class="tips-card glass-card">
+                        <h3>Application Tips</h3>
+                        <div class="tip-item">
+                            <h4>✅ Be Specific</h4>
+                            <p>Detail your relevant experience and why you're passionate about ending GBVF.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>✅ Honesty Matters</h4>
+                            <p>We value authenticity. Share your genuine interests and availability.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>✅ Ask Questions</h4>
+                            <p>We're happy to answer any questions about volunteering before you apply.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>✅ Next Steps</h4>
+                            <p>After applying, we'll contact you within 3-5 business days for an interview.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-support glass-card">
+                        <h3>Questions About Volunteering?</h3>
+                        <p>Our volunteer coordinator is here to help you find the perfect role.</p>
+                        <div class="contact-info">
+                            <p>📧 volunteers@riseabovegbvf.org</p>
+                            <p>📞 074 067 7801 (Ask for Volunteer Coordinator)</p>
+                        </div>
+                        <button class="btn-contact" onclick="window.location.href='contact.html'">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hear From Our Volunteers</h2>
+                <p>Discover the experiences of those who are already making a difference</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <p>"Volunteering with Rise Above GBVF has been life-changing. The training prepared me well, and seeing the direct impact on survivors' lives is incredibly rewarding."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍💼</div>
+                        <div class="author-info">
+                            <strong>Nomusa D.</strong>
+                            <span>Counseling Support Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <p>"As a retired teacher, I now facilitate skills workshops. It's amazing to help survivors gain confidence and practical skills for their independence journey."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍🏫</div>
+                        <div class="author-info">
+                            <strong>James P.</strong>
+                            <span>Skills Training Facilitator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <p>"The support and training I received gave me confidence I never knew I had. Now I'm helping spread awareness in my own community."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍🎓</div>
+                        <div class="author-info">
+                            <strong>Lerato M.</strong>
+                            <span>Awareness Campaign Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="volunteer-gallery">
+                <h3>Volunteers in Action</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">📸</div>
+                        <p>Community Workshop</p>
+                    </div>
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">📸</div>
+                        <p>Awareness Event</p>
+                    </div>
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">📸</div>
+                        <p>Training Session</p>
+                    </div>
+                    <div class="gallery-item glass-card">
+                        <div class="gallery-placeholder">📸</div>
+                        <p>Team Meeting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="volunteer-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about volunteering with Rise Above GBVF</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>Do I need prior experience to volunteer?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No prior experience is required for most roles! We provide comprehensive training for all volunteers. What's most important is your passion for helping others and willingness to learn.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>How much time do I need to commit?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible commitments ranging from 2 hours per week for event volunteers to 8+ hours for regular roles. We'll work with you to find a schedule that fits your availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>Is training provided?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All volunteers complete our comprehensive training program covering GBVF awareness, safety protocols, communication skills, and role-specific training. Training is free and scheduled at convenient times.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>Can students volunteer?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We welcome students and can provide documentation for community service hours. Many of our roles are perfect for students studying social work, psychology, or community development.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>What support will I receive as a volunteer?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll receive ongoing supervision, regular check-ins, additional training opportunities, peer support, and access to counseling resources if needed. We're committed to supporting our volunteers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h4>Are there remote volunteering opportunities?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We have several remote roles including administrative support, social media assistance, research, and content creation. These roles offer flexibility while making a meaningful impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="volunteer-cta">
+        <div class="container">
+            <div class="cta-content glass-card">
+                <h2>Join Our Movement Today</h2>
+                <p>Your time and talents can help create a community free from gender-based violence. Become part of the solution and make a lasting impact.</p>
+                
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <div class="stat-number">85</div>
+                        <div class="stat-label">Active Volunteers</div>
+                    </div>
+                    <div class="cta-stat">
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-label">Hours Contributed</div>
+                    </div>
+                    <div class="cta-stat">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Lives Impacted</div>
+                    </div>
+                </div>
+
+                <div class="cta-actions">
+                    <button class="btn-primary" onclick="scrollToApplication()">Apply to Volunteer</button>
+                    <button class="btn-secondary" onclick="window.location.href='contact.html'">Contact Coordinator</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Rise Above GBVF</h3>
+                    <p>Creating a world free from gender-based violence and femicide in Shastripark, Phoenix, KwaZulu Natal.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📞</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="resources.html#safety">Safety Planning</a></li>
+                        <li><a href="contact.html">Crisis Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📍 Shastripark, Phoenix<br>KwaZulu Natal, South Africa</p>
+                        <p>📞 074 067 7801</p>
+                        <p>✉️ help@riseabovegbvf.org</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rise Above GBVF. Founded in Shastripark, Phoenix, KZN. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Role Details Modal -->
+    <div id="roleModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div id="roleModalContent">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Success Modal -->
+    <div id="applicationSuccessModal" class="modal">
+        <div class="modal-content glass-card">
+            <div class="success-content">
+                <div class="success-icon">🎉</div>
+                <h3>Application Submitted!</h3>
+                <p>Thank you for your interest in volunteering with Rise Above GBVF. We're excited to review your application.</p>
+                
+                <div class="success-details">
+                    <div class="success-item">
+                        <strong>Next Steps:</strong>
+                        <span>We'll contact you within 3-5 business days to schedule an interview</span>
+                    </div>
+                    <div class="success-item">
+                        <strong>Reference Number:</strong>
+                        <span>VOL-2025-00127</span>
+                    </div>
+                </div>
+
+                <div class="success-actions">
+                    <button class="btn-primary" onclick="closeApplicationSuccess()">Continue</button>
+                    <button class="btn-secondary" onclick="printApplication()">Print Confirmation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
