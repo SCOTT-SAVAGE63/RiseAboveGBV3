@@ -72,7 +72,7 @@ class RiseAboveGBVF {
         counters.forEach(counter => observer.observe(counter));
     }
 
-    animateCounter(counter) {
+    data-count(counter) {
         const target = parseInt(counter.getAttribute('data-count'));
         const duration = 2000;
         const step = target / (duration / 16);
@@ -2225,4 +2225,5 @@ init() {
     }
     
     console.log('Rise Above GBVF website initialized');
+
 }
