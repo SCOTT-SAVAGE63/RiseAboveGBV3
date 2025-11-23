@@ -1,10 +1,11 @@
+
 // Rise Above GBVF - Main JavaScript File
-class RiseAboveGBVF {
-    constructor() {
+//class RiseAboveGBVF {
+    constructor(); {
         this.init();
     }
 
-    init() {
+    init(); {
         this.setupMobileMenu();
         this.setupScrollAnimations();
         this.setupCounterAnimations();
@@ -16,7 +17,7 @@ class RiseAboveGBVF {
     }
 
     // Mobile Menu Toggle
-    setupMobileMenu() {
+    setupMobileMenu(); {
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         
@@ -36,49 +37,9 @@ class RiseAboveGBVF {
         });
     }
 
-    // ========================================
-    // ANIMATED STATISTICS COUNTER
-    // ========================================
-    const statNumbers = document.querySelectorAll('.stat-number');
-    let hasAnimated = false;
-    
-    function animateStats() {
-        if (hasAnimated) return;
-        
-        const statsSection = document.querySelector('.stats-section');
-        if (!statsSection) return;
-        
-        const rect = statsSection.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-        
-        if (isVisible) {
-            hasAnimated = true;
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-target'));
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
-                
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        stat.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        stat.textContent = target;
-                    }
-                };
-                
-                updateCounter();
-            });
-        }
-    }
-    
-    window.addEventListener('scroll', animateStats);
-    animateStats();
-
+  
     // Form Handling
-    setupFormHandlers() {
+    setupFormHandlers() ;{
         const forms = document.querySelectorAll('form');
         forms.forEach(form => {
             form.addEventListener('submit', (e) => {
@@ -95,7 +56,7 @@ class RiseAboveGBVF {
         });
     }
 
-    validateField(field) {
+    validateField(field) ;{
         const value = field.value.trim();
         let isValid = true;
         let errorMessage = '';
@@ -124,15 +85,15 @@ class RiseAboveGBVF {
         return isValid;
     }
 
-    isValidEmail(email) {
+    isValidEmail(email) ;{
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    isValidPhone(phone) {
+    isValidPhone(phone) ;{
         return /^[\+]?[0-9\s\-\(\)]{10,}$/.test(phone);
     }
 
-    setFieldValidity(field, isValid, message) {
+    setFieldValidity(field, isValid, message) ;{
         if (isValid) {
             field.classList.remove('error');
             field.classList.add('valid');
@@ -144,7 +105,7 @@ class RiseAboveGBVF {
         }
     }
 
-    showFieldError(field, message) {
+    showFieldError(field, message) ;{
         this.removeFieldError(field);
         const errorDiv = document.createElement('div');
         errorDiv.className = 'field-error';
@@ -152,19 +113,19 @@ class RiseAboveGBVF {
         field.parentNode.appendChild(errorDiv);
     }
 
-    removeFieldError(field) {
+    removeFieldError(field) ;{
         const existingError = field.parentNode.querySelector('.field-error');
         if (existingError) {
             existingError.remove();
         }
     }
 
-    clearFieldError(field) {
+    clearFieldError(field) ;{
         field.classList.remove('error');
         this.removeFieldError(field);
     }
 
-    async handleFormSubmit(form) {
+    async .handleFormSubmit(form) ;{
         const formData = new FormData(form);
         const allFieldsValid = this.validateForm(form);
 
@@ -192,7 +153,7 @@ class RiseAboveGBVF {
         }
     }
 
-    validateForm(form) {
+    validateForm(form) ;{
         const requiredFields = form.querySelectorAll('input[required], textarea[required]');
         let allValid = true;
 
@@ -205,7 +166,7 @@ class RiseAboveGBVF {
         return allValid;
     }
 
-    simulateApiCall(formData) {
+    simulateApiCall(formData) ;{
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 // Simulate random success/failure for demo
@@ -215,7 +176,7 @@ class RiseAboveGBVF {
     }
 
     // Emergency Features
-    setupEmergencyFeatures() {
+    setupEmergencyFeatures() ;{
         // Quick Exit
         const quickExit = document.getElementById('quickExit');
         if (quickExit) {
@@ -234,7 +195,7 @@ class RiseAboveGBVF {
         }
     }
 
-    showEmergencyModal() {
+    showEmergencyModal() ;{
         const modal = document.createElement('div');
         modal.className = 'emergency-modal glass-card';
         modal.innerHTML = `
@@ -272,7 +233,7 @@ class RiseAboveGBVF {
     }
 
     // Interactive Elements
-    setupInteractiveElements() {
+    setupInteractiveElements() ;{
         // Add hover effects to cards
         const cards = document.querySelectorAll('.glass-card');
         cards.forEach(card => {
@@ -297,7 +258,7 @@ class RiseAboveGBVF {
         });
     }
 
-    showServiceModal(serviceName) {
+    showServiceModal(serviceName) ;{
         const modal = document.createElement('div');
         modal.className = 'service-modal glass-card';
         modal.innerHTML = `
@@ -321,7 +282,7 @@ class RiseAboveGBVF {
     }
 
     // Smooth Scrolling
-    setupSmoothScrolling() {
+    setupSmoothScrolling() ;{
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -337,7 +298,7 @@ class RiseAboveGBVF {
     }
 
     // Notification System
-    showNotification(message, type = 'info') {
+    showNotification(message, type = 'info') ;{
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.textContent = message;
@@ -376,7 +337,7 @@ class RiseAboveGBVF {
             setTimeout(() => notification.remove(), 300);
         }, 5000);
     }
-}
+//}
 
 // Additional utility functions
 const Utils = {
@@ -419,6 +380,49 @@ const Utils = {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.RiseAboveGBVF = new RiseAboveGBVF();
+
+  // ========================================
+    // ANIMATED STATISTICS COUNTER
+    // ========================================
+    let statNumbers = document.querySelectorAll('.stat-number');
+    let hasAnimated = false; 
+    function animateStats() {
+       
+        if (hasAnimated) return;
+        
+        const statsSection = document.querySelector('.stats-section');
+        if (!statsSection) return;
+        
+        const rect = statsSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        
+        if (isVisible) {
+            hasAnimated = true;
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+    }
+    
+    window.addEventListener('scroll', animateStats);
+    animateStats();
+
+
 });
 
 // Add error boundary
@@ -434,7 +438,7 @@ if (typeof module !== 'undefined' && module.exports) {
 // Add these methods to the RiseAboveGBVF class
 
 // Timeline animation
-setupTimelineAnimations() {
+setupTimelineAnimations() ;{
     const timelineItems = document.querySelectorAll('.timeline-item');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -455,7 +459,7 @@ setupTimelineAnimations() {
 }
 
 // Enhanced counter animations for impact section
-setupImpactCounters() {
+setupImpactCounters() ;{
     const impactStats = document.querySelectorAll('.impact-stat .stat-number');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -470,7 +474,7 @@ setupImpactCounters() {
 }
 
 // Team member hover effects
-setupTeamInteractions() {
+setupTeamInteractions() ;{
     const teamMembers = document.querySelectorAll('.team-member');
     teamMembers.forEach(member => {
         member.addEventListener('mouseenter', () => {
@@ -484,7 +488,7 @@ setupTeamInteractions() {
 }
 
 // Update the init method to include new features
-init() {
+init() ;{
     this.setupMobileMenu();
     this.setupScrollAnimations();
     this.setupCounterAnimations();
@@ -499,7 +503,7 @@ init() {
 }
 
 // Contact Page Specific Functionality
-setupContactPage() {
+setupContactPage() ;{
     this.setupContactForm();
     this.setupFAQToggle();
     this.setupMapInteractions();
@@ -508,7 +512,7 @@ setupContactPage() {
 }
 
 // Enhanced Contact Form Handling
-setupContactForm() {
+setupContactForm() ;{
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
 
@@ -526,7 +530,7 @@ setupContactForm() {
     });
 }
 
-validateContactField(field) {
+validateContactField(field) ;{
     const value = field.value.trim();
     let isValid = true;
     let errorMessage = '';
@@ -546,7 +550,7 @@ validateContactField(field) {
     return isValid;
 }
 
-async handleContactSubmission(form) {
+async. handleContactSubmission(form) ;{
     const submitBtn = form.querySelector('.form-submit');
     const btnText = submitBtn.querySelector('.btn-text');
     const spinner = submitBtn.querySelector('.loading-spinner');
@@ -595,7 +599,7 @@ async handleContactSubmission(form) {
     }
 }
 
-validateContactForm(form) {
+validateContactForm(form) ;{
     const requiredFields = form.querySelectorAll('[required]');
     let allValid = true;
 
@@ -609,7 +613,7 @@ validateContactForm(form) {
 }
 
 // FAQ Toggle Functionality
-setupFAQToggle() {
+setupFAQToggle() ;{
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
@@ -629,7 +633,7 @@ setupFAQToggle() {
 }
 
 // Map Interactions
-setupMapInteractions() {
+setupMapInteractions() ;{
     const map = document.getElementById('interactiveMap');
     if (map) {
         map.addEventListener('click', () => {
@@ -643,7 +647,7 @@ setupMapInteractions() {
 }
 
 // Get Directions Function
-getDirections() {
+getDirections() ;{
     this.showNotification('Opening directions to our office...', 'info');
     setTimeout(() => {
         window.open('https://maps.google.com?q=Shastripark,Phoenix,KwaZulu+Natal,South+Africa', '_blank');
@@ -651,7 +655,7 @@ getDirections() {
 }
 
 // Modal Functionality
-setupModalFunctionality() {
+setupModalFunctionality() ;{
     const modal = document.getElementById('bookingModal');
     const closeBtn = document.querySelector('.close-modal');
     const bookingForm = document.getElementById('bookingForm');
@@ -691,13 +695,13 @@ setupModalFunctionality() {
     }
 }
 
-handleBookingSubmission(form) {
+handleBookingSubmission(form) ;{
     this.showNotification('Appointment request received! We\'ll contact you to confirm.', 'success');
     form.reset();
 }
 
 // Update main init method to include contact page features
-init() {
+init() ;{
     this.setupMobileMenu();
     this.setupScrollAnimations();
     this.setupCounterAnimations();
@@ -722,7 +726,7 @@ init() {
 }
 
 // Resources Page Specific Functionality
-setupResourcesPage() {
+setupResourcesPage() ;{
     this.setupSafetyTabs();
     this.setupResourceModals();
     this.setupDownloadButtons();
@@ -731,7 +735,7 @@ setupResourcesPage() {
 }
 
 // Safety Planning Tabs
-setupSafetyTabs() {
+setupSafetyTabs() ;{
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabPanes = document.querySelectorAll('.tab-pane');
 
@@ -755,7 +759,7 @@ setupSafetyTabs() {
 }
 
 // Resource Information Modals
-setupResourceModals() {
+setupResourceModals() ;{
     const modal = document.getElementById('resourceModal');
     const closeBtn = document.querySelector('.close-modal');
     
@@ -939,7 +943,7 @@ window.showNearbyServices = () => {
 }
 
 // Update main init method to include resources page features
-init() {
+init() ;{
     this.setupMobileMenu();
     this.setupScrollAnimations();
     this.setupCounterAnimations();
@@ -969,7 +973,7 @@ init() {
 }
 
 // Donate Page Specific Functionality
-setupDonatePage() {
+setupDonatePage() ;{
     this.setupDonationForm();
     this.setupAmountSelection();
     this.setupFrequencySelection();
@@ -979,7 +983,7 @@ setupDonatePage() {
 }
 
 // Donation Amount Selection
-setupAmountSelection() {
+setupAmountSelection() ;{
     const amountButtons = document.querySelectorAll('.amount-btn');
     const customAmountInput = document.getElementById('customAmount');
     const summaryAmount = document.getElementById('summaryAmount');
@@ -1020,7 +1024,7 @@ setupAmountSelection() {
 }
 
 // Frequency Selection
-setupFrequencySelection() {
+setupFrequencySelection() ;{
     const frequencyButtons = document.querySelectorAll('.frequency-btn');
     const summaryFrequency = document.getElementById('summaryFrequency');
 
@@ -1038,7 +1042,7 @@ setupFrequencySelection() {
     });
 }
 
-getFrequencyText(frequency) {
+getFrequencyText(frequency) ;{
     const frequencyMap = {
         'once': 'One-time',
         'monthly': 'Monthly',
@@ -1048,7 +1052,7 @@ getFrequencyText(frequency) {
 }
 
 // Payment Method Toggle
-setupPaymentMethodToggle() {
+setupPaymentMethodToggle() ;{
     const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
     const cardFields = document.getElementById('cardFields');
     const bankFields = document.getElementById('bankFields');
@@ -1067,7 +1071,7 @@ setupPaymentMethodToggle() {
 }
 
 // Update Donation Summary
-updateDonationSummary(amount) {
+updateDonationSummary(amount) ;{
     const summaryAmount = document.getElementById('summaryAmount');
     const summaryTotal = document.getElementById('summaryTotal');
     const successAmount = document.getElementById('successAmount');
@@ -1082,11 +1086,11 @@ updateDonationSummary(amount) {
     this.updateImpactMessage(amount);
 }
 
-formatCurrency(amount) {
+formatCurrency(amount) ;{
     return 'R' + amount.toLocaleString('en-ZA');
 }
 
-updateImpactMessage(amount) {
+updateImpactMessage(amount) ;{
     const impactMessage = document.querySelector('.impact-message');
     const selectedAmount = document.querySelector('.selected-amount');
     const impactList = document.querySelector('.impact-list');
@@ -1127,7 +1131,7 @@ updateImpactMessage(amount) {
 }
 
 // Donation Form Handling
-setupDonationForm() {
+setupDonationForm() ;{
     const donationForm = document.getElementById('donationForm');
     
     if (donationForm) {
@@ -1145,7 +1149,7 @@ setupDonationForm() {
     }
 }
 
-validateDonationField(field) {
+validateDonationField(field) ;{
     const value = field.value.trim();
     let isValid = true;
     let errorMessage = '';
@@ -1165,7 +1169,7 @@ validateDonationField(field) {
     return isValid;
 }
 
-async handleDonationSubmission(form) {
+async .handleDonationSubmission(form) ;{
     const submitBtn = form.querySelector('.btn-donate');
     const btnText = submitBtn.querySelector('.btn-text');
     const spinner = submitBtn.querySelector('.loading-spinner');
@@ -1206,7 +1210,7 @@ async handleDonationSubmission(form) {
     }
 }
 
-validateDonationForm(form) {
+validateDonationForm(form) ;{
     const requiredFields = form.querySelectorAll('[required]');
     let allValid = true;
 
@@ -1220,7 +1224,7 @@ validateDonationForm(form) {
 }
 
 // Success Modal
-showSuccessModal() {
+showSuccessModal() ;{
     const modal = document.getElementById('successModal');
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -1241,7 +1245,7 @@ window.printReceipt = () => {
 }
 
 // Recognition Tabs
-setupRecognitionTabs() {
+setupRecognitionTabs() ;{
     const recognitionTabs = document.querySelectorAll('.recognition-tab');
     const recognitionPanes = document.querySelectorAll('.recognition-pane');
 
@@ -1352,7 +1356,7 @@ window.closeModal = () => {
 }
 
 // Update main init method to include donate page features
-init() {
+init() ;{
     this.setupMobileMenu();
     this.setupScrollAnimations();
     this.setupCounterAnimations();
@@ -1387,7 +1391,7 @@ init() {
 }
 
 // Volunteer Page Specific Functionality
-setupVolunteerPage() {
+setupVolunteerPage() ;{
     this.setupOpportunityFilters();
     this.setupVolunteerForm();
     this.setupRoleModals();
@@ -1396,7 +1400,7 @@ setupVolunteerPage() {
 }
 
 // Opportunity Filtering
-setupOpportunityFilters() {
+setupOpportunityFilters() ;{
     const filterButtons = document.querySelectorAll('.filter-btn');
     const opportunityCards = document.querySelectorAll('.opportunity-card');
 
@@ -1430,7 +1434,7 @@ setupOpportunityFilters() {
 }
 
 // Role Details Modal
-setupRoleModals() {
+setupRoleModals() ;{
     const modal = document.getElementById('roleModal');
     const closeBtn = document.querySelector('.close-modal');
     
@@ -1519,7 +1523,7 @@ window.closeRoleModal = () => {
 }
 
 // Volunteer Form Handling
-setupVolunteerForm() {
+setupVolunteerForm(); {
     const volunteerForm = document.getElementById('volunteerForm');
     
     if (volunteerForm) {
@@ -1550,7 +1554,7 @@ setupVolunteerForm() {
     }
 }
 
-validateVolunteerField(field) {
+validateVolunteerField(field) ;{
     const value = field.value.trim();
     let isValid = true;
     let errorMessage = '';
@@ -1570,7 +1574,7 @@ validateVolunteerField(field) {
     return isValid;
 }
 
-async handleVolunteerSubmission(form) {
+async.handleVolunteerSubmission(form); {
     const submitBtn = form.querySelector('.btn-volunteer');
     const btnText = submitBtn.querySelector('.btn-text');
     const spinner = submitBtn.querySelector('.loading-spinner');
@@ -1614,7 +1618,7 @@ async handleVolunteerSubmission(form) {
     }
 }
 
-validateVolunteerForm(form) {
+validateVolunteerForm(form) ;{
     const requiredFields = form.querySelectorAll('[required]');
     let allValid = true;
 
@@ -1637,7 +1641,7 @@ validateVolunteerForm(form) {
 }
 
 // Application Success Modal
-showApplicationSuccess() {
+showApplicationSuccess(); {
     const modal = document.getElementById('applicationSuccessModal');
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -1658,7 +1662,7 @@ window.printApplication = () => {
 }
 
 // Volunteer FAQ
-setupVolunteerFAQ() {
+setupVolunteerFAQ() ;{
     const faqItems = document.querySelectorAll('.volunteer-faq .faq-item');
     
     faqItems.forEach(item => {
@@ -1707,7 +1711,7 @@ window.applyForRole = (roleId) => {
 }
 
 // Update main init method to include volunteer page features
-init() {
+init(); {
     this.setupMobileMenu();
     this.setupScrollAnimations();
     this.setupCounterAnimations();
@@ -1747,7 +1751,7 @@ init() {
 }
 
 // News/Blog Page Specific Functionality
-setupNewsPage() {
+setupNewsPage(); {
     this.setupBlogFilters();
     this.setupSearchFunctionality();
     this.setupPagination();
@@ -1757,7 +1761,7 @@ setupNewsPage() {
 }
 
 // Blog Category Filtering
-setupBlogFilters() {
+setupBlogFilters(); {
     const categoryFilters = document.querySelectorAll('.category-filter');
     const categoryItems = document.querySelectorAll('.category-item');
     const blogCards = document.querySelectorAll('.blog-card');
@@ -1794,7 +1798,7 @@ setupBlogFilters() {
     });
 }
 
-filterBlogPosts(category) {
+filterBlogPosts(category); {
     const blogCards = document.querySelectorAll('.blog-card');
     
     blogCards.forEach(card => {
@@ -1815,7 +1819,7 @@ filterBlogPosts(category) {
 }
 
 // Search Functionality
-setupSearchFunctionality() {
+setupSearchFunctionality(); {
     const searchInput = document.getElementById('newsSearch');
     const searchButton = document.querySelector('.search-btn');
     const searchTags = document.querySelectorAll('.search-tag');
@@ -1850,7 +1854,7 @@ setupSearchFunctionality() {
     });
 }
 
-performSearch(query) {
+performSearch(query) ;{
     const blogCards = document.querySelectorAll('.blog-card');
     const searchTerm = query.toLowerCase().trim();
 
@@ -1888,7 +1892,7 @@ performSearch(query) {
     this.showSearchResults(query);
 }
 
-showSearchResults(query) {
+showSearchResults(query); {
     // Remove existing search results message
     const existingMessage = document.querySelector('.search-results-message');
     if (existingMessage) {
@@ -1917,7 +1921,7 @@ showSearchResults(query) {
 }
 
 // Pagination
-setupPagination() {
+setupPagination() ;{
     const paginationNumbers = document.querySelectorAll('.pagination-number');
     const prevBtn = document.querySelector('.pagination-btn.prev');
     const nextBtn = document.querySelector('.pagination-btn.next');
@@ -1951,12 +1955,12 @@ setupPagination() {
     }
 }
 
-getCurrentPage() {
+getCurrentPage(); {
     const activeNumber = document.querySelector('.pagination-number.active');
     return activeNumber ? parseInt(activeNumber.textContent) : 1;
 }
 
-changePage(pageNumber) {
+changePage(pageNumber); {
     // In a real implementation, this would load new content from a server
     // For now, we'll just simulate the page change
     this.showNotification(`Loading page ${pageNumber}...`, 'info');
@@ -1989,7 +1993,7 @@ changePage(pageNumber) {
 }
 
 // Blog Post Modals
-setupBlogModals() {
+setupBlogModals() ;{
     const modal = document.getElementById('blogPostModal');
     const closeBtn = modal.querySelector('.close-modal');
     
@@ -2116,12 +2120,12 @@ window.readPost = (postId) => {
     this.setupSocialSharing();
 }
 
-generatePostContent(title, category, date, readTime, content) {
+generatePostContent(title, category, date, readTime, content); {
     return content;
 }
 
 // Social Sharing
-setupSocialSharing() {
+setupSocialSharing(); {
     const shareButtons = document.querySelectorAll('.share-btn');
     
     shareButtons.forEach(button => {
@@ -2171,7 +2175,7 @@ window.listenToPodcast = () => {
 }
 
 // Update main init method to include news page features
-init() {
+init() ;{
     this.setupMobileMenu();
     this.setupScrollAnimations();
     this.setupCounterAnimations();
