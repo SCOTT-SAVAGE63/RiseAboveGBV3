@@ -36,58 +36,46 @@ class RiseAboveGBVF {
         });
     }
 
-    // Scroll Animations
-    setupScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
+    // ========================================
+    // ANIMATED STATISTICS COUNTER
+    // ========================================
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let hasAnimated = false;
+    
+    function animateStats() {
+        if (hasAnimated) return;
+        
+        const statsSection = document.querySelector('.stats-section');
+        if (!statsSection) return;
+        
+        const rect = statsSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        
+        if (isVisible) {
+            hasAnimated = true;
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+                
+                updateCounter();
             });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.service-card, .value-card, .stat-item').forEach(el => {
-            observer.observe(el);
-        });
+        }
     }
-
-    // Animated Counters
-    setupCounterAnimations() {
-        const counters = document.querySelectorAll('.stat-number');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    this.animateCounter(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        counters.forEach(counter => observer.observe(counter));
-    }
-
-    data-count(counter) {
-        const target = parseInt(counter.getAttribute('data-count'));
-        const duration = 2000;
-        const step = target / (duration / 16);
-        let current = 0;
-
-        const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-                counter.textContent = target;
-                clearInterval(timer);
-            } else {
-                counter.textContent = Math.floor(current);
-            }
-        }, 16);
-    }
+    
+    window.addEventListener('scroll', animateStats);
+    animateStats();
 
     // Form Handling
     setupFormHandlers() {
@@ -2225,5 +2213,4 @@ init() {
     }
     
     console.log('Rise Above GBVF website initialized');
-
 }
